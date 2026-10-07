@@ -8,11 +8,11 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { label: "Home", href: "#home" },
-    { label: "Insurance", href: "#insurance" },
-    { label: "Investments", href: "#investments" },
-    { label: "Financial Planning", href: "#financial-planning" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "Insurance Guide", href: "/insurance-guide" },
+    { label: "Investments", href: "/investments" },
+    { label: "About Us", href: "/about-us" },
+    { label: "Contact Us", href: "/contact" },
   ];
 
   return (
