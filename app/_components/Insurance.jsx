@@ -42,19 +42,20 @@ const insuranceOptions = [
 
 export default function InsuranceSolutions() {
     return (
-        <section id="insurance" className="w-full scroll-mt-24 bg-white py-8">
+        <section id="insurance" className="w-full scroll-mt-24 bg-white">
             <div className="">
 
                 {/* ================= HERO ================= */}
                 <div
-                    className="relative overflow-hidden bg-cover bg-center"
+                    className="relative overflow-hidden bg-cover bg-no-repeat bg-bottom-right sm:bg-center"
                     style={{
                         backgroundImage:
                             "url('/insurance.webp')",
                     }}
                 >
+                    <div className="sm:hidden absolute inset-0 bg-black/30" />
 
-                    <Wrapper className="relative z-10 flex min-h-47.5 items-center px-6 pt-6 pb-6 sm:px-10">
+                    <Wrapper className="relative z-10 flex items-center pt-32 pb-32 sm:px-10">
                         <div className="flex items-center gap-4">
 
                             {/* Text */}
@@ -74,8 +75,8 @@ export default function InsuranceSolutions() {
                     </Wrapper>
                 </div>
 
-                {/* ================= CARDS ================= */}
-                <Wrapper className="grid grid-cols-2 gap-6 pt-6 pb-6 bg-white sm:grid-cols-3 lg:grid-cols-5">
+
+                {/* <Wrapper className="grid grid-cols-2 gap-6 pt-6 pb-6 bg-white sm:grid-cols-3 lg:grid-cols-5">
 
                     {insuranceOptions.map((item) => {
                         const Icon = item.icon;
@@ -86,7 +87,7 @@ export default function InsuranceSolutions() {
                                 className="group border border-gray-200 p-2.5 md:p-8 rounded-2xl text-center transition-all duration-300"
                             >
 
-                                {/* Icon */}
+                            
                                 <div className="mx-auto flex h-10 w-10 items-center justify-center text-(--secondary)">
                                     <Icon
                                         size={28}
@@ -94,17 +95,16 @@ export default function InsuranceSolutions() {
                                     />
                                 </div>
 
-                                {/* Title */}
+                           
                                 <h3 className="mt-1 font-bold">
                                     {item.title}
                                 </h3>
 
-                                {/* Description */}
-                                <p className="mx-auto mt-1 max-w-37.5 text-xs leading-4 text-gray-500">
+                    <p className="mx-auto mt-1 max-w-37.5 text-xs leading-4 text-gray-500">
                                     {item.description}
                                 </p>
 
-                                {/* Learn More */}
+                             
                                 <button
                                     type="button"
                                     className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-(--secondary) transition-all duration-200 group-hover:gap-2"
@@ -119,7 +119,7 @@ export default function InsuranceSolutions() {
 
                 </Wrapper>
 
-                {/* ================= BOTTOM CTA ================= */}
+      
                 <div className="flex flex-col gap-3 rounded-b-xl bg-(--secondary) px-5 py-3 text-white sm:flex-row sm:items-center sm:justify-between sm:px-7">
 
                     <p className="text-xs font-medium sm:text-sm">
@@ -135,7 +135,7 @@ export default function InsuranceSolutions() {
                         WhatsApp Us
                     </button>
 
-                </div>
+                </div> */}
 
             </div>
         </section>
