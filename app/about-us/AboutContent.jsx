@@ -9,6 +9,7 @@ import {
   Target,
 } from "lucide-react";
 import Wrapper from "../_components/Wrapper";
+import Link from "next/link";
 
 const philosophy = [
   {
@@ -216,10 +217,10 @@ export default function AboutContent() {
               We aim to help you become more aware of your financial choices so
               that you can make decisions with greater clarity and confidence.
             </p>
-            <a href="mailto:hello@investninsure.com" className="mt-6 inline-flex items-center gap-2 rounded-full bg-(--gold) px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-black/15 transition hover:-translate-y-0.5 hover:brightness-105">
+            <Link href="/contact" className="mt-6 inline-flex items-center gap-2 rounded-full bg-(--gold) px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-black/15 transition hover:-translate-y-0.5 hover:brightness-105">
               Start a conversation
               <ArrowRight size={16} />
-            </a>
+            </Link>
             <div className="mx-auto mt-8 border-t border-white/15 pt-7">
               <p className="text-lg font-bold">Invest N Insure</p>
               <p className="mt-2 text-sm italic text-(--gold)">Invest. Protect. Thrive.</p>

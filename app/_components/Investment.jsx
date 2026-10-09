@@ -57,7 +57,7 @@ export default function InvestmentSolutions() {
 
                             {/* Text */}
                             <div>
-                                <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                                <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl">
                                     Investment Solutions
                                 </h2>
 

@@ -3,7 +3,7 @@ import { FaShield, FaWhatsapp } from "react-icons/fa6";
 import { GoArrowUpRight } from "react-icons/go";
 
 export const WA =
-    "https://wa.me/919818592859?text=Hello%20Invest%20N%20Insure%2C%20I%20would%20like%20to%20book%20a%20consultation.";
+    "https://wa.me/919818592859";
 
 export default function Hero() {
     return (
@@ -44,7 +44,7 @@ export default function Hero() {
 
                     <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                         <Link
-                            href="#"
+                            href="/contact"
                             className="inline-flex items-center justify-center gap-2 rounded-xl bg-(--primary) px-5 py-3 text-sm font-semibold text-white shadow-lg"
                         >
                             Book a Consultation

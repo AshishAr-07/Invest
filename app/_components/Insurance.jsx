@@ -60,7 +60,7 @@ export default function InsuranceSolutions() {
 
                             {/* Text */}
                             <div>
-                                <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                                <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl">
                                     Insurance Solutions
                                 </h2>
 

@@ -13,6 +13,7 @@ import {
   WalletCards,
 } from "lucide-react";
 import Wrapper from "../_components/Wrapper";
+import Link from "next/link";
 
 const mutualFundOptions = [
   "Equity Mutual Funds",
@@ -250,10 +251,10 @@ export default function InvestmentContent() {
                 us to discuss your financial goals and investment requirements.
               </p>
             </SectionHeading>
-            <a href="mailto:hello@investninsure.com" className="mt-8 inline-flex items-center gap-2 rounded-full bg-(--primary) px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-(--primary)/15 transition hover:-translate-y-0.5 hover:bg-(--secondary)">
+            <Link href="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-(--primary) px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-(--primary)/15 transition hover:-translate-y-0.5 hover:bg-(--secondary)">
               Discuss Your Investment Goals
               <ArrowRight size={16} />
-            </a>
+            </Link>
           </div>
           <div className="relative overflow-hidden rounded-4xl bg-[#f7f8f6] p-8 ring-1 ring-inset ring-slate-200 sm:p-10">
             <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full border border-(--gold)/25" />

@@ -8,8 +8,8 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr] lg:gap-20">
           <div>
-            <a
-              href="#home"
+            <Link
+              href="/"
               className="inline-flex items-center gap-2 text-white"
               aria-label="Invest N Insure home"
             >
@@ -17,13 +17,13 @@ export default function Footer() {
               <span className="text-lg font-bold tracking-tight">
                 Invest <span className="text-(--gold)">N</span> Insure
               </span>
-            </a>
+            </Link>
             <p className="mt-5 max-w-sm text-sm leading-6 text-slate-300">
               Helping you invest smart, protect better, and build a more
               confident financial future.
             </p>
             <Link
-              href="#contact"
+              href="/contact"
               className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-(--gold) px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-amber-600"
             >
               Start a conversation
@@ -37,11 +37,11 @@ export default function Footer() {
             </h2>
             <nav aria-label="Footer navigation" className="mt-5 flex flex-col gap-3">
               {[
-                ["Home", "#home"],
-                ["Insurance", "#insurance"],
-                ["Investments", "#investments"],
-                ["Financial Planning", "#financial-planning"],
-                ["Contact", "#contact"],
+                ["Home", "/"],
+                ["Insurance", "/insurance-guide"],
+                ["Investments", "/investments"],
+                ["About Us", "/about-us"],
+                ["Contact", "/contact"],
               ].map(([label, href]) => (
                 <Link
                   key={href}
@@ -59,20 +59,20 @@ export default function Footer() {
               Get in touch
             </h2>
             <div className="mt-5 flex flex-col gap-4 text-sm text-slate-200">
-              <a
-                href="mailto:hello@investninsure.com"
+              <Link
+                href="mailto:info@investninsure.in"
                 className="flex items-start gap-3 transition-colors hover:text-white"
               >
                 <Mail size={18} className="mt-0.5 shrink-0 text-(--gold)" />
-                hello@investninsure.com
-              </a>
-              <a
-                href="tel:+910000000000"
+                info@investninsure.in
+              </Link>
+              <Link
+                href="tel:+919818592859"
                 className="flex items-start gap-3 transition-colors hover:text-white"
               >
                 <Phone size={18} className="mt-0.5 shrink-0 text-(--gold)" />
-                +91 00000 00000
-              </a>
+                +91 9818592859
+              </Link>
               <p className="flex items-start gap-3">
                 <MapPin size={18} className="mt-0.5 shrink-0 text-(--gold)" />
                 <span>India</span>

@@ -12,6 +12,7 @@ import {
   UserRound,
 } from "lucide-react";
 import Wrapper from "../_components/Wrapper";
+import Link from "next/link";
 
 const healthFactors = [
   "Family size",
@@ -155,10 +156,10 @@ export default function InsuranceContent() {
               over time. A policy that was adequate several years ago may need
               to be reviewed today.
             </p>
-            <a href="#insurance-checkup" className="mt-7 inline-flex items-center gap-2 rounded-full bg-(--primary) px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-(--primary)/15 transition hover:-translate-y-0.5 hover:bg-(--secondary)">
+            <Link href="/contact" className="mt-7 inline-flex items-center gap-2 rounded-full bg-(--primary) px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-(--primary)/15 transition hover:-translate-y-0.5 hover:bg-(--secondary)">
               Get Your Health Insurance Reviewed
               <ArrowRight size={16} />
-            </a>
+            </Link>
           </SectionHeading>
           <div className="relative overflow-hidden rounded-4xl bg-white p-8 shadow-sm ring-1 ring-inset ring-slate-200 sm:p-10">
             <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full border border-(--gold)/25" />
@@ -237,10 +238,10 @@ export default function InsuranceContent() {
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1fr] lg:items-center">
             <SectionHeading eyebrow="Insurance check-up" title="Do you know if your current insurance is enough?">
               <p>Let’s review your existing protection and identify areas that may need attention.</p>
-              <a href="mailto:hello@investninsure.com" className="mt-8 inline-flex items-center gap-2 rounded-full bg-(--primary) px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-(--primary)/15 transition hover:-translate-y-0.5 hover:bg-(--secondary)">
+              <Link href="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-(--primary) px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-(--primary)/15 transition hover:-translate-y-0.5 hover:bg-(--secondary)">
                 Request an Insurance Review
                 <ArrowRight size={16} />
-              </a>
+              </Link>
             </SectionHeading>
             <div className="relative overflow-hidden rounded-4xl border border-slate-200 bg-[#f7f8f6] p-6 sm:p-9">
               <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full border border-(--gold)/20" />
