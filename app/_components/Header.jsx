@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { ArrowUpRight, CircleDollarSign, Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,16 +19,18 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 shadow-sm backdrop-blur">
       <div className="mx-auto flex min-h-18 max-w-7xl items-center justify-between gap-6 px-6 py-3 lg:px-8">
-        <a
+        <Link
           href="#home"
           className="flex shrink-0 items-center gap-2 text-(--primary)"
           aria-label="Invest N Insure home"
         >
-          <CircleDollarSign size={32} strokeWidth={1.8} />
-          <span className="text-lg font-bold tracking-tight">
-            Invest <span className="text-(--gold)">N</span> Insure
-          </span>
-        </a>
+          <Image
+            src="/logo.png"
+            alt="Invest N Insure logo"
+            width={120}
+            height={80}
+          />
+        </Link>
 
         <nav aria-label="Main navigation" className="hidden items-center gap-5 lg:flex">
           {navigation.map((item) => (
