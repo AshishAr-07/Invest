@@ -204,7 +204,7 @@ export default function AboutContent() {
         </Wrapper>
       </section>
 
-      <section id="contact" className="scroll-mt-24 bg-(--secondary) text-white">
+      <section className="scroll-mt-24 bg-(--primary) text-white">
         <Wrapper className="relative overflow-hidden text-center">
           <div className="pointer-events-none absolute -right-24 -top-28 h-72 w-72 rounded-full border border-white/10" />
           <div className="pointer-events-none absolute -bottom-40 -left-20 h-80 w-80 rounded-full border border-(--gold)/20" />

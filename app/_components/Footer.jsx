@@ -16,7 +16,7 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="Invest N Insure logo"
-                width={120}
+                width={150}
                 height={80}
               />
             </Link>

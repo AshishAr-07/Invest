@@ -27,7 +27,7 @@ const STATS = [
 
 export function Why() {
     return (
-        <section id="why" className="relative z-10 my-8 bg-(--secondary) text-white">
+        <section id="why" className="relative z-10 my-8 overflow-x-clip bg-(--secondary) text-white">
             <Wrapper className="relative">
                 <div className="pointer-events-none absolute -right-16 top-10 h-40 w-40 rounded-full border border-(--gold)/15 sm:-right-8" />
 
@@ -44,7 +44,7 @@ export function Why() {
                     {WHY.map(([I, t, d], i) => (
                         <div
                             key={t}
-                            className={`group relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-5 shadow-[0_1px_2px_rgba(15,23,42,0.04)] ring-1 ring-transparent transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-(--gold)/50 hover:shadow-[0_18px_40px_-16px_rgba(15,23,42,0.18)] hover:ring-(--gold)/10 ${i === 4 ? 'sm:col-span-2 lg:col-span-1' : ''
+                            className={`group relative min-w-0 overflow-hidden rounded-2xl border border-slate-200/80 bg-white p-5 shadow-[0_1px_2px_rgba(15,23,42,0.04)] ring-1 ring-transparent transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-(--gold)/50 hover:shadow-[0_18px_40px_-16px_rgba(15,23,42,0.18)] hover:ring-(--gold)/10 ${i === 4 ? 'sm:col-span-2 lg:col-span-1' : ''
                                 }`}
                         >
                             {/* Gold accent line that grows on hover */}
@@ -69,18 +69,18 @@ export function Why() {
                     ))}
                 </div>
 
-                <div className="absolute inset-x-4 bottom-0 translate-y-[65%] sm:translate-y-1/2 rounded-2xl bg-(--primary) px-4 py-6 text-white sm:inset-x-8 sm:px-8 sm:py-7 lg:inset-x-12">
+                <div className="absolute inset-x-2 bottom-0 translate-y-[65%] rounded-2xl bg-(--primary) px-3 py-6 text-white sm:inset-x-8 sm:translate-y-1/2 sm:px-8 sm:py-7 lg:inset-x-12">
                     <div className="grid grid-cols-2 gap-y-6 md:grid-cols-4 md:gap-y-0">
                         {STATS.map(([I, n, l], i) => (
                             <div
                                 key={l}
-                                className={`flex items-center justify-center gap-3 px-3 ${i > 0 ? 'md:border-l md:border-white/20' : ''
+                                className={`flex min-w-0 items-center justify-center gap-2 px-1 sm:gap-3 sm:px-3 ${i > 0 ? 'md:border-l md:border-white/20' : ''
                                     }`}
                             >
-                                <I className="h-9 w-9 shrink-0 text-(--gold)" strokeWidth={1.6} />
-                                <div>
-                                    <div className="text-2xl font-semibold leading-none">{n}</div>
-                                    <div className="mt-1.5 text-[10px] font-medium uppercase tracking-[0.14em] text-white/70">{l}</div>
+                                <I className="h-7 w-7 shrink-0 text-(--gold) sm:h-9 sm:w-9" strokeWidth={1.6} />
+                                <div className="min-w-0">
+                                    <div className="text-xl font-semibold leading-none sm:text-2xl">{n}</div>
+                                    <div className="mt-1.5 break-words text-[9px] font-medium uppercase leading-tight tracking-[0.1em] text-white/70 sm:text-[10px] sm:tracking-[0.14em]">{l}</div>
                                 </div>
                             </div>
                         ))}

@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Cta() {
   return (
     <section className="relative overflow-hidden bg-white">
-      <div className="relative overflow-hidden border border-white/10 bg-(--secondary) px-6 py-12 text-center sm:px-12 sm:py-16">
+      <div className="relative overflow-hidden border border-white/10 bg-(--primary) px-6 py-12 text-center sm:px-12 sm:py-16">
         <div aria-hidden="true" className="absolute inset-0 " />
         <div aria-hidden="true" className="absolute -bottom-24 -left-16 h-48 w-48 rounded-full border border-(--gold)/15" />
 
