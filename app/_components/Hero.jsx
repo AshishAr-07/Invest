@@ -64,7 +64,7 @@ export default function Hero() {
 
                 <div className="relative mx-auto w-full max-w-lg lg:justify-self-end">
 
-                    <div className="relative rounded-[1.75rem] bg-white pb-12 shadow-2xl">
+                    <div className="relative rounded-[1.75rem] b-12 shadow-2xl">
                         <img
                             src="/advisor.jpg"
                             alt="Ritesh Sharma, mutual fund distributor and financial planner at Invest N Insure"

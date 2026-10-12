@@ -1,5 +1,8 @@
+"use client";
+
 import React from 'react'
 import { Landmark, Shield, Target, TrendingUp } from 'lucide-react'
+import { motion } from 'framer-motion';
 import Wrapper from './Wrapper';
 import Link from 'next/link';
 
@@ -14,10 +17,25 @@ export default function Solutions() {
   return (
     <section id="solutions">
       <Wrapper>
-        <h2 className="text-3xl text-center font-semibold tracking-tight text-(--primary) sm:text-4xl">OUR KEY SOLUTIONS</h2>
+        <motion.h2
+          className="text-3xl text-center font-semibold tracking-tight text-(--primary) sm:text-4xl"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
+          OUR KEY SOLUTIONS
+        </motion.h2>
         <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-          {SOLUTIONS.map(({ t, I, tags, d, c }) => (
-            <article key={t} className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-transform duration-200 hover:-translate-y-1">
+          {SOLUTIONS.map(({ t, I, tags, d, c }, i) => (
+            <motion.article
+              key={t}
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: i * 0.1, ease: 'easeOut' }}
+              className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-transform duration-200 hover:-translate-y-1"
+            >
               <span className="grid h-14 w-14 place-items-center rounded-xl bg-(--primary) text-(--gold)"><I width={30} height={30} /></span>
               <h3 className="mt-5 text-xl font-extrabold text-(--primary)">{t}</h3>
               <p className="mt-3 text-sm leading-relaxed text-slate-600">{d}</p>
@@ -31,8 +49,7 @@ export default function Solutions() {
                   </li>
                 ))}
               </ul>
-              {/* <Link href="" className="mt-5 inline-flex items-center font-semibold text-(--secondary) hover:text-(--primary)">{c}</Link> */}
-            </article>
+            </motion.article>
           ))}
         </div>
       </Wrapper>

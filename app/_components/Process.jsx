@@ -1,3 +1,5 @@
+"use client";
+
 import {
     BarChart3,
     CheckCircle2,
@@ -5,6 +7,7 @@ import {
     Search,
     ShieldCheck,
 } from "lucide-react";
+import { motion } from "framer-motion";
 import Wrapper from "./Wrapper";
 
 const steps = [
@@ -55,25 +58,39 @@ export default function Process() {
     return (
         <section className="">
             <Wrapper>
-                <div className="mx-auto mb-12 text-center">
+                <motion.div
+                    className="mx-auto mb-12 text-center"
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                >
                     <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-(--gold)">
                         Our Approach
                     </p>
                     <h2 className="mb-4 text-3xl font-semibold leading-tight text-(--primary) md:text-4xl">
                         A Clear Path To Financial Confidence
                     </h2>
-                </div>
+                </motion.div>
 
                 <div className="relative">
                     <div className="absolute left-[10%] right-[10%] top-14 hidden h-0.5 bg-(--gold)/40 xl:block" />
 
                     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-                        {steps.map((step) => {
+                        {steps.map((step, index) => {
                             const Icon = step.icon;
 
                             return (
-                                <article
+                                <motion.article
                                     key={step.num}
+                                    initial={{ opacity: 0, y: 32 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: 0.2 }}
+                                    transition={{
+                                        duration: 0.5,
+                                        delay: index * 0.1,
+                                        ease: "easeOut",
+                                    }}
                                     className="group relative flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-(--gold)/50 hover:shadow-lg"
                                 >
                                     <div className="mb-5 flex flex-col items-center text-center">
@@ -96,7 +113,7 @@ export default function Process() {
                                     <p className="text-center text-sm leading-6 text-slate-600">
                                         {step.description}
                                     </p>
-                                </article>
+                                </motion.article>
                             );
                         })}
                     </div>
