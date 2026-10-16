@@ -77,7 +77,8 @@ export default function Footer() {
               </Link>
               <p className="flex items-start gap-3">
                 <MapPin size={18} className="mt-0.5 shrink-0 text-(--gold)" />
-                <span>India</span>
+                <span>H-1/43A, Mahavir Enclave,
+                  Palam, New Delhi - 110045</span>
               </p>
             </div>
           </div>
